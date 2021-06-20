@@ -1,0 +1,25 @@
+{
+    "name": "kresonja-php/app",
+    "description": "Kreiranje REST API za projektni rad iz kolegija Programiranje 3.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Marina Kresonja",
+            "email": "mkresonja@ffos.hr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kresonja\\": "src/Kresonja"
+        }
+    },
+    "require": {
+        "mikecao/flight": "^1.3",
+        "doctrine/orm": "*",
+        "easyrdf/easyrdf": "^1.0",
+        "ml/json-ld": "^1.2",
+        "semsol/arc2": "^2.5",
+        "symfony/serializer": "*",
+        "symfony/property-access": "*"
+    }
+}

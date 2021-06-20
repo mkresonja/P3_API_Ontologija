@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://oziz.ffos.hr/mkresonja/ontologija#"
+     xml:base="http://oziz.ffos.hr/mkresonja/ontologija"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologija="http://oziz.ffos.hr/mkresonja/ontologija#">
+    <owl:Ontology rdf:about="http://oziz.ffos.hr/mkresonja/ontologija">
+        <owl:imports rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija"/>
+        <dc:creator>Marina Kresonja</dc:creator>
+        <rdfs:comment>U ontologiji se nalaze meni najdraže knjige koje posjedujem. Može se koristiti za pronalaženje novih naslova za čitanje.</rdfs:comment>
+        <rdfs:label>Ontologija knjiga iz kućne knjižnice</rdfs:label>
+    </owl:Ontology>
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#imaAutora">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#imaIzdavaca">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#napisaoJeKnjigu">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#pripadaZanru">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+    </owl:ObjectProperty>
+    
+
+
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#brojStranica">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>  
+
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#imaSjedisteU">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#jeIzdana">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+    
+
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Alex_Landragin">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Prijelazi"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex Landragin</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Algoritam">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <imaSjedisteU rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zagreb/propao je</imaSjedisteU>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algoritam</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Bernardine_Evaristo">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Djevojka_zena_drugo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernardine Evaristo</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Distopijska_fikcija">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distopijska fikcija</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Djevojka_zena_drugo">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Bernardine_Evaristo"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Profil"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Roman"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">398</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Djevojka, zena, drugo</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Doktor_Sleep">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Stephen_King"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Lumen"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Fantasy"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Horor"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Znanstvena_fantastika"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">457</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2021.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doktor Sleep</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/mkresonja/ontologija#Fantasy -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Fantasy">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/mkresonja/ontologija#Fokus -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Fokus">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <imaSjedisteU rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zagreb</imaSjedisteU>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fokus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/mkresonja/ontologija#George_Orwell -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#George_Orwell">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#1984."/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Orwell</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/mkresonja/ontologija#Horor -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Horor">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/mkresonja/ontologija#Istina -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Istina">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Melanie_Raabe"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Znanje"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Triler"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">326</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2017.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Istina</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Kriminalisticki_roman">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kriminalisticki roman</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Lumen">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <imaSjedisteU rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zagreb</imaSjedisteU>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lumen</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Magijski_realizam">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magijski realizam</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Melanie_Raabe">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Istina"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melanie Raabe</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Misery">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Stephen_King"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Lumen"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Horor"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Triler"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">293</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Misery</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Prijelazi">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Alex_Landragin"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Vorto_Palabra"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Fantasy"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Magijski_realizam"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">319</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prijelazi</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Profil">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <imaSjedisteU rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zagreb</imaSjedisteU>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profil</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Publicistika">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publicistika</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Revolveras">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Stephen_King"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Lumen"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Fantasy"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Triler"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Znanstvena_fantastika"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">207</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2017.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Revolveras</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Roman">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roman</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Samuel_Bjork">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Sova"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samuel Bjork</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Sapiens_Kratka_povijest_čovječanstva">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Yuval_Noah_Harari"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Fokus"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Publicistika"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">458</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2017.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sapiens: Kratka povijest covjecanstva</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Sareni_ducan">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <imaSjedisteU rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koprivnica</imaSjedisteU>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sareni ducan</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Sova">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Samuel_Bjork"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Znanje"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Kriminalisticki_roman"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Triler"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">433</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2107.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sova</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Stephen_King">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Doktor_Sleep"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Misery"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Revolveras"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Vreca_kostiju"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zelena_milja"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen King</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#SysPrint">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <imaSjedisteU rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zagreb</imaSjedisteU>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SysPrint</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Triler">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triler</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Vorto_Palabra">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <imaSjedisteU rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zagreb</imaSjedisteU>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorto Palabra</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Vreca_kostiju">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Stephen_King"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Algoritam"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Fantasy"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Horor"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Magijski_realizam"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">447</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vreca kostiju</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Yuval_Noah_Harari">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Autor"/>
+        <napisaoJeKnjigu rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Sapiens_Kratka_povijest_čovječanstva"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yuval Noah Harari</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Zelena_milja">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Stephen_King"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#SysPrint"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Fantasy"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Magijski_realizam"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Triler"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">595</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1996.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zelena milja</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Znanje">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Izdavac"/>
+        <imaSjedisteU rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zagreb</imaSjedisteU>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Znanje</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#Znanstvena_fantastika">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Zanr"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Znanstvena fantastika</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/mkresonja/ontologija#1984.">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Naslov"/>
+        <imaAutora rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#George_Orwell"/>
+        <imaIzdavaca rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Sareni_ducan"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Distopijska_fikcija"/>
+        <pripadaZanru rdf:resource="http://oziz.ffos.hr/mkresonja/ontologija#Znanstvena_fantastika"/>
+        <brojStranica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</brojStranica>
+        <jeIzdana rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015.</jeIzdana>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1984.</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>

@@ -1,1 +1,2 @@
-Ontologija knjiga i API za potrebe projekta iz kolegija Programiranje 3.
+# P3RESTAPI
+API za projektni rad iz kolegija Programiranje 3
